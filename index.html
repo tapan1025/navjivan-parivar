@@ -721,12 +721,12 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="#about" onclick="scrollTo('about')">About</a>
-      <a href="#events" onclick="scrollTo('events')">Events</a>
-      <a href="#faq" onclick="scrollTo('faq')">FAQ</a>
-      <a href="#members" onclick="scrollTo('members')">Members</a>
-      <a href="#contact" onclick="scrollTo('contact')">Contact</a>
-      <a href="#join" onclick="scrollTo('join')" class="active">Join Us</a>
+      <a href="#about" onclick="navScrollTo('about')">About</a>
+      <a href="#events" onclick="navScrollTo('events')">Events</a>
+      <a href="#faq" onclick="navScrollTo('faq')">FAQ</a>
+      <a href="#members" onclick="navScrollTo('members')">Members</a>
+      <a href="#contact" onclick="navScrollTo('contact')">Contact</a>
+      <a href="#join" onclick="navScrollTo('join')" class="active">Join Us</a>
     </div>
   </div>
 </nav>
@@ -740,8 +740,8 @@
   <div class="hero-devanagari">नवजीवन सीनियर परिवार</div>
   <div class="hero-mission">"Renewing Lives Through Friendship, Wellness &amp; Culture"</div>
   <div class="hero-btns">
-    <a href="#events" class="btn-primary" onclick="scrollTo('events')">🗓 View Events</a>
-    <a href="#join" class="btn-outline" onclick="scrollTo('join')">Join Our WhatsApp</a>
+    <a href="#events" class="btn-primary" onclick="navScrollTo('events')">🗓 View Events</a>
+    <a href="#join" class="btn-outline" onclick="navScrollTo('join')">Join Our WhatsApp</a>
   </div>
 </div>
 
@@ -1483,7 +1483,7 @@ function sendContactEmail() {
   }, 1500);
 }
 
-function scrollTo(id) {
+function navScrollTo(id) {
   if (event) event.preventDefault();
   const el = document.getElementById(id);
   if (!el) return;
