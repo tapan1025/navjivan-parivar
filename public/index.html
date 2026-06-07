@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navjivan Senior Parivar</title>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #FF6B00;
+    --deep-saffron: #E05500;
+    --gold: #D4A017;
+    --cream: #FFF8EE;
+    --deep-cream: #FDF0D5;
+    --maroon: #8B0000;
+    --deep-maroon: #6A0000;
+    --forest: #2E5E2E;
+    --teal: #0E6E6E;
+    --text-dark: #2A1A0A;
+    --text-mid: #5A3A1A;
+    --text-muted: #8A6A4A;
+    --white: #FFFFFF;
+    --lotus-pink: #E8A0BF;
+    --border-gold: rgba(212,160,23,0.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── Ornamental top bar ── */
+  .topbar {
+    background: var(--maroon);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    font-family: 'Kalam', cursive;
+  }
+
+  /* ── Nav ── */
+  nav {
+    background: var(--cream);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 12px rgba(212,160,23,0.18);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-icon {
+    width: 46px;
+    height: 46px;
+  }
+  .nav-title-block .brand-name {
+    font-family: 'Yatra One', cursive;
+    font-size: 20px;
+    color: var(--maroon);
+    line-height: 1.1;
+  }
+  .nav-title-block .brand-sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-mid);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover {
+    background: var(--saffron);
+    color: white;
+  }
+  .nav-links a.active {
+    background: var(--maroon);
+    color: var(--gold);
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #8B0000 0%, #C0392B 40%, #FF6B00 80%, #D4A017 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 70px 24px 90px;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='6' fill='none' stroke='rgba(255,255,255,0.07)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cpath d='M40 22 L44 34 L40 30 L36 34 Z' fill='rgba(255,255,255,0.06)'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+  }
+  .hero-om {
+    font-size: 52px;
+    color: rgba(255,255,255,0.18);
+    position: absolute;
+    top: 16px;
+    left: 32px;
+    font-family: 'Yatra One', cursive;
+    user-select: none;
+  }
+  .hero-om-r {
+    right: 32px;
+    left: auto;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    backdrop-filter: blur(4px);
+  }
+  .hero h1 {
+    font-family: 'Yatra One', cursive;
+    font-size: clamp(32px, 6vw, 60px);
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  }
+  .hero-devanagari {
+    font-size: clamp(14px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+    font-family: 'Kalam', cursive;
+  }
+  .hero-mission {
+    font-size: clamp(15px, 2.2vw, 20px);
+    color: var(--gold);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 32px;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+  }
+  .hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: white;
+    color: var(--maroon);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+  .btn-primary:hover {
+    background: var(--gold);
+    color: var(--maroon);
+    transform: translateY(-2px);
+  }
+  .btn-outline {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: 2px solid rgba(255,255,255,0.6);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* ── Wave divider ── */
+  .wave-divider {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: var(--cream);
+    margin-top: -2px;
+  }
+
+  /* ── Section styles ── */
+  section {
+    padding: 64px 24px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--saffron);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Yatra One', cursive;
+    font-size: clamp(26px, 4vw, 40px);
+    color: var(--maroon);
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    height: 1.5px;
+    width: 60px;
+    background: linear-gradient(to right, transparent, var(--gold));
+  }
+  .section-divider::after {
+    background: linear-gradient(to left, transparent, var(--gold));
+  }
+  .section-divider-icon {
+    color: var(--gold);
+    font-size: 20px;
+  }
+
+  /* ── About / Mission ── */
+  .about-section {
+    background: var(--deep-cream);
+    border-top: 4px solid var(--gold);
+    border-bottom: 4px solid var(--gold);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-text h3 {
+    font-family: 'Yatra One', cursive;
+    color: var(--maroon);
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .about-text p {
+    color: var(--text-mid);
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  .mission-card {
+    background: linear-gradient(135deg, var(--maroon), #C0392B);
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .mission-card::before {
+    content: '❁';
+    position: absolute;
+    font-size: 120px;
+    opacity: 0.07;
+    right: -20px;
+    top: -20px;
+    color: white;
+  }
+  .mission-card .mission-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .mission-card .mission-text {
+    font-family: 'Yatra One', cursive;
+    font-size: clamp(18px, 3vw, 26px);
+    color: white;
+    line-height: 1.4;
+  }
+  .mission-card .mission-sub {
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+  }
+
+  /* ── Events ── */
+  .events-section { background: var(--cream); }
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .event-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1.5px solid var(--border-gold);
+    transition: all 0.25s;
+    box-shadow: 0 2px 12px rgba(139,0,0,0.07);
+  }
+  .event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(139,0,0,0.14);
+    border-color: var(--gold);
+  }
+  .event-header {
+    background: linear-gradient(135deg, var(--maroon), #B22222);
+    padding: 20px 20px 16px;
+    position: relative;
+  }
+  .event-header.saffron { background: linear-gradient(135deg, var(--deep-saffron), #FF8C00); }
+  .event-header.teal { background: linear-gradient(135deg, var(--teal), #1A9999); }
+  .event-header.forest { background: linear-gradient(135deg, var(--forest), #3D7A3D); }
+  .event-date-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+  .event-header h3 {
+    font-family: 'Yatra One', cursive;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .event-header .event-time {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+  }
+  .event-body {
+    padding: 18px 20px;
+  }
+  .event-body p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .event-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .event-meta span { display: flex; align-items: center; gap: 4px; }
+  .attendees-section { margin-bottom: 14px; }
+  .attendees-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    margin-bottom: 8px;
+  }
+  .attendees-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    min-height: 28px;
+  }
+  .attendee-chip {
+    background: var(--deep-cream);
+    border: 1px solid var(--border-gold);
+    color: var(--maroon);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .attendee-chip:hover { background: var(--gold); color: white; border-color: var(--gold); }
+  .attendee-chip.attending {
+    background: var(--maroon);
+    color: white;
+    border-color: var(--maroon);
+  }
+  .attendee-chip.attending::after { content: ' ✓'; }
+  .rsvp-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .rsvp-btn:hover { opacity: 0.9; transform: scale(0.99); }
+  .rsvp-count { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 6px; }
+
+  /* ── Team / Leadership ── */
+  .team-section {
+    background: var(--deep-cream);
+    border-top: 4px solid var(--gold);
+    border-bottom: 4px solid var(--gold);
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .team-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    border: 1.5px solid var(--border-gold);
+    transition: all 0.2s;
+  }
+  .team-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(139,0,0,0.12); }
+  .team-card.director { border-color: var(--gold); border-width: 2.5px; background: linear-gradient(180deg, #FFF8EE, white); }
+  .team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Yatra One', cursive;
+    font-size: 24px;
+    color: white;
+  }
+  .team-avatar.maroon { background: linear-gradient(135deg, var(--maroon), #B22222); }
+  .team-avatar.saffron { background: linear-gradient(135deg, var(--saffron), var(--deep-saffron)); }
+  .team-avatar.teal { background: linear-gradient(135deg, var(--teal), #1A9999); }
+  .team-avatar.forest { background: linear-gradient(135deg, var(--forest), #3D7A3D); }
+  .team-card .director-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--maroon);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .team-card h4 {
+    font-family: 'Yatra One', cursive;
+    color: var(--maroon);
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  .team-card .role {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .team-card .team-bio {
+    font-size: 12px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--cream); }
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item {
+    border: 1.5px solid var(--border-gold);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: white;
+    transition: box-shadow 0.2s;
+  }
+  .faq-item:hover { box-shadow: 0 4px 16px rgba(212,160,23,0.15); }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 18px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--maroon);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+  }
+  .faq-arrow {
+    font-size: 18px;
+    color: var(--saffron);
+    transition: transform 0.25s;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-answer {
+    display: none;
+    padding: 0 20px 18px;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.8;
+    border-top: 1px solid var(--border-gold);
+    padding-top: 14px;
+  }
+  .faq-item.open .faq-answer { display: block; }
+
+  /* ── WhatsApp CTA ── */
+  .whatsapp-section {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    padding: 56px 24px;
+    text-align: center;
+  }
+  .whatsapp-section h2 {
+    font-family: 'Yatra One', cursive;
+    color: white;
+    font-size: clamp(22px, 4vw, 36px);
+    margin-bottom: 12px;
+  }
+  .whatsapp-section p { color: rgba(255,255,255,0.85); margin-bottom: 28px; font-size: 15px; }
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: #128C7E;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  }
+  .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .btn-whatsapp svg { width: 22px; height: 22px; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--maroon);
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    padding: 36px 24px;
+  }
+  footer .footer-title {
+    font-family: 'Yatra One', cursive;
+    color: var(--gold);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  footer p { font-size: 13px; margin-bottom: 6px; }
+  footer .footer-mission {
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 16px;
+  }
+  .footer-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 16px auto;
+    border-radius: 2px;
+  }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-box {
+    background: white;
+    border-radius: 20px;
+    padding: 32px 28px;
+    max-width: 420px;
+    width: 90%;
+    border-top: 5px solid var(--gold);
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .modal-box h3 {
+    font-family: 'Yatra One', cursive;
+    color: var(--maroon);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .modal-box p { font-size: 14px; color: var(--text-mid); margin-bottom: 20px; }
+  .modal-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border-gold);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    margin-bottom: 14px;
+    outline: none;
+  }
+  .modal-input:focus { border-color: var(--gold); }
+  .modal-actions { display: flex; gap: 10px; }
+  .modal-confirm {
+    flex: 1;
+    background: var(--maroon);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+  .modal-cancel {
+    flex: 1;
+    background: var(--deep-cream);
+    color: var(--text-mid);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px;
+    border-radius: 10px;
+    border: 1px solid var(--border-gold);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ── Notification toast ── */
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--forest);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 3000;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ── Scroll fade in ── */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- Top Ornamental Bar -->
+<div class="topbar">🪔 &nbsp; Namaste — Welcome to Our Parivar &nbsp; 🪔</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <svg class="nav-logo-icon" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="23" cy="23" r="22" fill="#FFF0D5" stroke="#D4A017" stroke-width="1.5"/>
+        <text x="23" y="31" text-anchor="middle" font-size="24" font-family="serif" fill="#8B0000">ॐ</text>
+        <circle cx="23" cy="23" r="10" fill="none" stroke="#D4A017" stroke-width="0.7" stroke-dasharray="3 2"/>
+      </svg>
+      <div class="nav-title-block">
+        <div class="brand-name">Navjivan Senior Parivar</div>
+        <div class="brand-sub">South Florida · Senior Community</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#team">Leadership</a>
+      <a href="#faq">FAQ</a>
+      <a href="#members">Members</a>
+      <a href="#contact">Contact</a>
+      <a href="#join" class="active">Join Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-om">ॐ</div>
+  <div class="hero-om hero-om-r">❁</div>
+  <div class="hero-badge">South Florida Senior Community</div>
+  <h1>Navjivan Senior Parivar</h1>
+  <div class="hero-devanagari">नवजीवन सीनियर परिवार</div>
+  <div class="hero-mission">"Renewing Lives Through Friendship, Wellness &amp; Culture"</div>
+  <div class="hero-btns">
+    <a href="#events" class="btn-primary">🗓 View Events</a>
+    <a href="#join" class="btn-outline">Join Our WhatsApp</a>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="section-label">Who We Are</div>
+    <div class="section-title">Our Story &amp; Mission</div>
+    <div class="section-divider"><span class="section-divider-icon">❁</span></div>
+    <div class="about-grid fade-in">
+      <div class="about-text">
+        <h3>A Family Away From Family</h3>
+        <p>Navjivan Senior Parivar is a warm, vibrant community for Indian seniors living in South Florida. We believe that life's richest chapters are filled with laughter, connection, and cultural pride — and we are here to make that happen.</p>
+        <p>Founded with love, our Parivar (family) brings together seniors from all Indian backgrounds — Gujarati, Hindi, Tamil, Punjabi, Marathi and more — to celebrate shared traditions, support one another's wellness, and create memories that last a lifetime.</p>
+        <p>Whether you are new to Florida or have lived here for decades, you will always find a warm smile and open arms in our community.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;">
+          <div style="text-align:center;">
+            <div style="font-family:'Yatra One',cursive;font-size:28px;color:var(--maroon);" id="counter-members">0</div>
+            <div style="font-size:12px;color:var(--text-muted);">Members</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Yatra One',cursive;font-size:28px;color:var(--maroon);" id="counter-events">0</div>
+            <div style="font-size:12px;color:var(--text-muted);">Events Hosted</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Yatra One',cursive;font-size:28px;color:var(--maroon);" id="counter-years">0</div>
+            <div style="font-size:12px;color:var(--text-muted);">Years of Joy</div>
+          </div>
+        </div>
+      </div>
+      <div class="mission-card">
+        <div class="mission-label">Our Mission</div>
+        <div class="mission-text">"Renewing Lives Through Friendship, Wellness &amp; Culture"</div>
+        <div class="mission-sub">We exist to uplift, connect, and celebrate every senior in our community with dignity and joy.</div>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 14px;text-align:left;display:flex;align-items:center;gap:10px;">
+            <span style="font-size:20px;">🤝</span>
+            <span style="font-size:13px;color:white;">Building lifelong friendships</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 14px;text-align:left;display:flex;align-items:center;gap:10px;">
+            <span style="font-size:20px;">🧘</span>
+            <span style="font-size:13px;color:white;">Promoting health &amp; wellness</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 14px;text-align:left;display:flex;align-items:center;gap:10px;">
+            <span style="font-size:20px;">🎭</span>
+            <span style="font-size:13px;color:white;">Celebrating Indian culture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Events -->
+<section id="events" class="events-section">
+  <div class="container">
+    <div class="section-label">What's Happening</div>
+    <div class="section-title">Upcoming Events</div>
+    <div class="section-divider"><span class="section-divider-icon">🪔</span></div>
+    <div class="events-grid fade-in" id="events-grid">
+      <!-- Events injected by JS -->
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <button class="btn-primary" onclick="showAddEventModal()" style="background:var(--maroon);color:white;">+ Suggest a New Event</button>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership -->
+<section id="team" class="team-section">
+  <div class="container">
+    <div class="section-label">Our Leaders</div>
+    <div class="section-title">Meet the Parivar Seva Team</div>
+    <div class="section-divider"><span class="section-divider-icon">🌸</span></div>
+    <div class="team-grid fade-in">
+      <div class="team-card director">
+        <div class="director-badge">⭐ Senior Director</div>
+        <div class="team-avatar maroon">R</div>
+        <h4>Rajesh Patel</h4>
+        <div class="role">Senior Director, Navjivan Senior Parivar</div>
+        <div class="team-bio">A visionary leader with a deep love for community. Rajesh has dedicated years to building bridges of friendship among South Florida seniors.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar saffron">S</div>
+        <h4>Sunita Mehta</h4>
+        <div class="role">Wellness &amp; Yoga Coordinator</div>
+        <div class="team-bio">Certified yoga instructor and wellness advocate bringing daily health and mindfulness to our Parivar.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar teal">A</div>
+        <h4>Anita Sharma</h4>
+        <div class="role">Cultural Events Head</div>
+        <div class="team-bio">Master organizer of festivals, Garba nights, and cultural celebrations that keep our traditions alive.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar forest">M</div>
+        <h4>Mohan Gupta</h4>
+        <div class="role">Community Outreach Lead</div>
+        <div class="team-bio">Connecting members, welcoming newcomers, and ensuring every senior feels seen and valued in our family.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#9B2D7F,#C0448F);">A</div>
+        <h4>Apurva Desai</h4>
+        <div class="role">Event Coordinator</div>
+        <div class="team-bio">Passionate about bringing people together, Apurva handles event logistics, scheduling, and ensures every gathering runs smoothly and joyfully.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <div class="section-label">Questions &amp; Answers</div>
+    <div class="section-title">Frequently Asked Questions</div>
+    <div class="section-divider"><span class="section-divider-icon">❁</span></div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is Navjivan Senior Parivar? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Navjivan Senior Parivar is a welcoming senior community group for Indian seniors in South Florida. Our goal is to bring seniors together through friendship, wellness programs, cultural events, and social gatherings. "Navjivan" means "New Life" — and that is exactly what we offer every member.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Who can join our Parivar? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Our community is open to all Indian seniors (60+) residing in South Florida and the surrounding areas. We welcome seniors from all Indian states, languages, and backgrounds. Friends and family of members are also invited to join our public events!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I join the WhatsApp group? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Simply click the "Join Our WhatsApp Group" button on this website or ask an existing member to add you. The group is called "South Florida Senior Event Group" and is moderated to keep it respectful and welcoming for all.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What types of events do you organize? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">We organize a wonderful variety of events including: Yoga &amp; Meditation mornings, Bhajan Sandhya (devotional evenings), Diwali &amp; Holi celebrations, potluck luncheons, cultural film screenings, health awareness talks, Garba nights, birthday celebrations, and much more!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is there a membership fee? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Most of our gatherings and community events are free of charge. Some special events may have a small voluntary contribution to cover venue or food costs. There is no mandatory membership fee — our community is built on love, not money.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I RSVP for events? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">On this website, simply find the event you wish to attend, click your name in the attendees list, or click the RSVP button to add yourself. You can also RSVP directly in our WhatsApp group when events are announced there.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I contact the Senior Director? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">You can reach our Senior Director and team through the WhatsApp group or by messaging directly through the group. Our leadership team is always happy to assist with questions, event ideas, or any concerns.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Member Registration & Directory -->
+<section id="members" style="background:var(--deep-cream);border-top:4px solid var(--gold);border-bottom:4px solid var(--gold);padding:64px 24px;">
+  <div class="container">
+    <div class="section-label">Our Community</div>
+    <div class="section-title">Join & Member Directory</div>
+    <div class="section-divider"><span class="section-divider-icon">🌸</span></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;" class="reg-grid">
+
+      <!-- Registration Form -->
+      <div style="background:white;border-radius:20px;padding:32px 28px;border:2px solid var(--gold);box-shadow:0 4px 24px rgba(139,0,0,0.08);">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+          <div style="font-size:28px;">🪔</div>
+          <div>
+            <div style="font-family:'Yatra One',cursive;font-size:20px;color:var(--maroon);">Register as a Member</div>
+            <div style="font-size:12px;color:var(--text-muted);">Join our Parivar family — free & always welcome</div>
+          </div>
+        </div>
+        <div style="height:2px;background:linear-gradient(to right,var(--gold),transparent);margin:16px 0 20px;border-radius:2px;"></div>
+
+        <div style="margin-bottom:12px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Full Name *</label>
+          <input class="modal-input" type="text" id="reg-name" placeholder="e.g. Priya Sharma" style="margin-bottom:0;"/>
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Phone Number *</label>
+          <input class="modal-input" type="tel" id="reg-phone" placeholder="e.g. (954) 555-0101" style="margin-bottom:0;"/>
+        </div>
+        <div style="margin-bottom:12px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Email Address</label>
+          <input class="modal-input" type="email" id="reg-email" placeholder="e.g. priya@email.com" style="margin-bottom:0;"/>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">City</label>
+            <input class="modal-input" type="text" id="reg-city" placeholder="e.g. Miramar" style="margin-bottom:0;"/>
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Language Spoken</label>
+            <select class="modal-input" id="reg-lang" style="margin-bottom:0;cursor:pointer;">
+              <option value="">Select…</option>
+              <option>Gujarati</option>
+              <option>Hindi</option>
+              <option>Punjabi</option>
+              <option>Tamil</option>
+              <option>Telugu</option>
+              <option>Marathi</option>
+              <option>Bengali</option>
+              <option>Kannada</option>
+              <option>Malayalam</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">About Yourself <span style="font-weight:400;color:var(--text-muted);">(optional)</span></label>
+          <textarea class="modal-input" id="reg-bio" rows="2" placeholder="Share a little about yourself — hobbies, interests…" style="margin-bottom:0;resize:vertical;"></textarea>
+        </div>
+
+        <button onclick="registerMember()" style="width:100%;background:linear-gradient(135deg,var(--maroon),#B22222);color:white;font-weight:700;font-size:15px;padding:13px;border-radius:12px;border:none;cursor:pointer;font-family:'Poppins',sans-serif;letter-spacing:0.3px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+          🙏 &nbsp; Register Me as a Member
+        </button>
+        <div id="reg-msg" style="margin-top:10px;font-size:13px;text-align:center;min-height:18px;"></div>
+      </div>
+
+      <!-- Member Directory -->
+      <div>
+        <div style="background:white;border-radius:16px;padding:20px;border:1.5px solid var(--border-gold);margin-bottom:16px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <div style="font-family:'Yatra One',cursive;font-size:17px;color:var(--maroon);">📋 Member Directory</div>
+            <div id="dir-count" style="font-size:12px;color:var(--text-muted);background:var(--deep-cream);padding:4px 10px;border-radius:10px;border:1px solid var(--border-gold);"></div>
+          </div>
+          <input class="modal-input" type="text" id="dir-search" placeholder="🔍 Search members…" oninput="renderDirectory()" style="margin-bottom:12px;"/>
+          <div id="member-directory-list" style="max-height:420px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;">
+            <div style="text-align:center;padding:24px;color:var(--text-muted);font-size:14px;">Loading members…</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);text-align:center;padding:0 8px;">
+          🔒 Contact info is visible only within this community directory. Members can be reached via phone or WhatsApp.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media(max-width:700px){.reg-grid{grid-template-columns:1fr !important;}}
+.dir-member-card{background:var(--deep-cream);border:1px solid var(--border-gold);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;transition:box-shadow 0.15s;}
+.dir-member-card:hover{box-shadow:0 3px 12px rgba(139,0,0,0.1);}
+.dir-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Yatra One',cursive;font-size:16px;color:white;flex-shrink:0;}
+</style>
+
+<!-- WhatsApp CTA -->
+<div id="join" class="whatsapp-section">
+  <div class="container">
+    <h2>Join Our WhatsApp Family</h2>
+    <p>Stay connected with all events, announcements, and community news via our WhatsApp group — South Florida Senior Event Group</p>
+    <a href="https://wa.me/+1?text=Namaste!%20I%20would%20like%20to%20join%20the%20Navjivan%20Senior%20Parivar%20community." class="btn-whatsapp" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Join South Florida Senior Event Group
+    </a>
+  </div>
+</div>
+
+<!-- Contact Us -->
+<section id="contact" style="background:var(--cream);padding:64px 24px;">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <div class="section-title">Contact Us</div>
+    <div class="section-divider"><span class="section-divider-icon">🪔</span></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:start;" class="contact-grid fade-in">
+
+      <!-- Left — info cards -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <!-- Email card -->
+        <div style="background:white;border-radius:16px;padding:24px 22px;border:1.5px solid var(--border-gold);display:flex;align-items:flex-start;gap:16px;box-shadow:0 2px 12px rgba(139,0,0,0.06);">
+          <div style="width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--maroon),#B22222);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">✉️</div>
+          <div>
+            <div style="font-weight:700;font-size:14px;color:var(--maroon);margin-bottom:4px;">Email Us</div>
+            <a href="mailto:parivarnavjivan@gmail.com" style="color:var(--saffron);font-size:14px;font-weight:600;text-decoration:none;word-break:break-all;">parivarnavjivan@gmail.com</a>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">We reply within 1–2 business days</div>
+          </div>
+        </div>
+
+        <!-- WhatsApp card -->
+        <div style="background:white;border-radius:16px;padding:24px 22px;border:1.5px solid var(--border-gold);display:flex;align-items:flex-start;gap:16px;box-shadow:0 2px 12px rgba(139,0,0,0.06);">
+          <div style="width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#128C7E,#25D366);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💬</div>
+          <div>
+            <div style="font-weight:700;font-size:14px;color:var(--maroon);margin-bottom:4px;">WhatsApp Group</div>
+            <div style="font-size:13px;color:var(--text-mid);">South Florida Senior Event Group</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Active daily — quickest way to reach us</div>
+          </div>
+        </div>
+
+        <!-- Event Coordinator card -->
+        <div style="background:white;border-radius:16px;padding:24px 22px;border:1.5px solid var(--border-gold);display:flex;align-items:flex-start;gap:16px;box-shadow:0 2px 12px rgba(139,0,0,0.06);">
+          <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#9B2D7F,#C0448F);display:flex;align-items:center;justify-content:center;font-family:'Yatra One',cursive;font-size:20px;color:white;flex-shrink:0;">A</div>
+          <div>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--saffron);font-weight:700;margin-bottom:4px;">Event Coordinator</div>
+            <div style="font-weight:700;font-size:15px;color:var(--maroon);">Apurva Desai</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">For event ideas, scheduling & logistics</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right — Contact form -->
+      <div style="background:white;border-radius:20px;padding:36px 32px;border:2px solid var(--gold);box-shadow:0 4px 28px rgba(139,0,0,0.09);">
+
+        <div style="font-family:'Yatra One',cursive;font-size:22px;color:var(--maroon);margin-bottom:4px;">Send Us a Message</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-bottom:24px;">Your message will be sent directly to <span style="color:var(--saffron);font-weight:600;">parivarnavjivan@gmail.com</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Your Name *</label>
+            <input class="modal-input" type="text" id="ct-name" placeholder="Full name" style="margin-bottom:0;"/>
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Phone Number</label>
+            <input class="modal-input" type="tel" id="ct-phone" placeholder="(954) 555-0000" style="margin-bottom:0;"/>
+          </div>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Your Email *</label>
+          <input class="modal-input" type="email" id="ct-email" placeholder="your@email.com" style="margin-bottom:0;"/>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Subject / Topic *</label>
+          <select class="modal-input" id="ct-subject" style="margin-bottom:0;cursor:pointer;">
+            <option value="">Select a topic…</option>
+            <option>General Question</option>
+            <option>Event Information</option>
+            <option>Membership Enquiry</option>
+            <option>Wellness Programme</option>
+            <option>Volunteer / Help Out</option>
+            <option>Feedback or Suggestion</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-mid);display:block;margin-bottom:4px;">Your Message *</label>
+          <textarea class="modal-input" id="ct-message" rows="5" placeholder="Type your question or message here… We love hearing from our Parivar 🙏" style="margin-bottom:0;resize:vertical;line-height:1.6;"></textarea>
+        </div>
+
+        <!-- Send button — uses mailto: to open email client pre-filled -->
+        <button onclick="sendContactEmail()" style="width:100%;background:linear-gradient(135deg,var(--saffron),var(--deep-saffron));color:white;font-weight:700;font-size:15px;padding:14px;border-radius:12px;border:none;cursor:pointer;font-family:'Poppins',sans-serif;letter-spacing:0.3px;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+          <span style="font-size:18px;">✉️</span> Send Message to Parivar
+        </button>
+
+        <div id="ct-msg" style="margin-top:12px;font-size:13px;text-align:center;min-height:18px;line-height:1.5;"></div>
+
+        <div style="margin-top:20px;padding:14px 16px;background:var(--deep-cream);border-radius:10px;border-left:3px solid var(--gold);font-size:12px;color:var(--text-muted);line-height:1.6;">
+          💡 <strong style="color:var(--text-mid);">Tip:</strong> Clicking "Send Message" will open your email app (Gmail, Mail, Outlook) with your message pre-filled, addressed to <strong>parivarnavjivan@gmail.com</strong>. Just hit Send!
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media(max-width:700px){ .contact-grid{ grid-template-columns:1fr !important; } }
+</style>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-title">Navjivan Senior Parivar</div>
+  <p>South Florida's Beloved Indian Senior Community</p>
+  <div class="footer-divider"></div>
+  <p>Serving seniors with love, culture &amp; wellness 🪔</p>
+  <div class="footer-mission">"Renewing Lives Through Friendship, Wellness &amp; Culture"</div>
+  <p style="margin-top:16px;font-size:11px;color:rgba(255,255,255,0.35);">© 2025 Navjivan Senior Parivar · South Florida</p>
+</footer>
+
+<!-- RSVP Modal -->
+<div class="modal-overlay" id="rsvp-modal">
+  <div class="modal-box" style="max-width:480px;">
+    <h3 id="modal-event-name">Event Name</h3>
+    <p style="margin-bottom:14px;">Select your name from the member list below to confirm your attendance.</p>
+
+    <!-- Search + dropdown -->
+    <div style="position:relative;margin-bottom:10px;">
+      <input class="modal-input" type="text" id="member-search" placeholder="🔍 Type to search your name…" oninput="filterMembers()" autocomplete="off" style="margin-bottom:0;"/>
+      <div id="member-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;background:white;border:1.5px solid var(--border-gold);border-top:none;border-radius:0 0 10px 10px;max-height:220px;overflow-y:auto;z-index:10;box-shadow:0 6px 20px rgba(0,0,0,0.12);">
+      </div>
+    </div>
+
+    <!-- Selected member card -->
+    <div id="selected-member-card" style="display:none;background:var(--deep-cream);border:1.5px solid var(--gold);border-radius:10px;padding:12px 14px;margin-bottom:14px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div id="sel-avatar" style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--maroon),#B22222);display:flex;align-items:center;justify-content:center;font-family:'Yatra One',cursive;font-size:16px;color:white;flex-shrink:0;"></div>
+        <div>
+          <div id="sel-name" style="font-weight:600;color:var(--maroon);font-size:15px;"></div>
+          <div id="sel-phone" style="font-size:12px;color:var(--text-muted);margin-top:2px;"></div>
+        </div>
+        <button onclick="clearSelection()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:18px;" title="Clear">✕</button>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;">Not on the list? Add yourself as a new member below.</p>
+    <input class="modal-input" type="text" id="new-member-name" placeholder="New member — full name" style="margin-bottom:6px;"/>
+    <input class="modal-input" type="tel" id="new-member-phone" placeholder="Phone number (optional)" style="margin-bottom:14px;"/>
+
+    <div class="modal-actions">
+      <button class="modal-confirm" onclick="confirmRSVP()">✓ Confirm Attendance</button>
+      <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Suggest Event Modal -->
+<div class="modal-overlay" id="suggest-modal">
+  <div class="modal-box">
+    <h3>Suggest an Event 🎉</h3>
+    <p>Have a great idea for a community gathering? Share it with our leadership team!</p>
+    <input class="modal-input" type="text" id="suggest-name" placeholder="Your name" />
+    <input class="modal-input" type="text" id="suggest-event" placeholder="Event idea (e.g. Holi Celebration Lunch)" />
+    <input class="modal-input" type="text" id="suggest-date" placeholder="Suggested date (e.g. March 2026)" />
+    <div class="modal-actions">
+      <button class="modal-confirm" onclick="submitSuggestion()">Send Suggestion</button>
+      <button class="modal-cancel" onclick="document.getElementById('suggest-modal').classList.remove('active')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Avatar colour palette ─────────────────────────────────────────
+const AV_COLORS = [
+  'linear-gradient(135deg,#8B0000,#B22222)',
+  'linear-gradient(135deg,#E05500,#FF8C00)',
+  'linear-gradient(135deg,#0E6E6E,#1A9999)',
+  'linear-gradient(135deg,#2E5E2E,#3D7A3D)',
+  'linear-gradient(135deg,#9B2D7F,#C0448F)',
+  'linear-gradient(135deg,#185FA5,#378ADD)',
+];
+function avatarColor(name){ let h=0; for(let c of name) h=(h*31+c.charCodeAt(0))%AV_COLORS.length; return AV_COLORS[Math.abs(h)]; }
+
+// ── Seed / runtime member list ────────────────────────────────────
+let MEMBERS = [
+  { name:"Priya Patel",        phone:"(954) 555-0101", email:"", city:"Pembroke Pines", lang:"Gujarati",  bio:"" },
+  { name:"Ramesh Shah",        phone:"(954) 555-0102", email:"", city:"Miramar",         lang:"Gujarati",  bio:"" },
+  { name:"Meena Joshi",        phone:"(786) 555-0103", email:"", city:"Doral",           lang:"Hindi",     bio:"" },
+  { name:"Suresh Kumar",       phone:"(305) 555-0104", email:"", city:"Hialeah",         lang:"Hindi",     bio:"" },
+  { name:"Kavita Mehta",       phone:"(954) 555-0105", email:"", city:"Weston",          lang:"Gujarati",  bio:"" },
+  { name:"Dinesh Patel",       phone:"(754) 555-0106", email:"", city:"Coral Springs",   lang:"Gujarati",  bio:"" },
+  { name:"Sarla Gupta",        phone:"(786) 555-0107", email:"", city:"Miami",           lang:"Hindi",     bio:"" },
+  { name:"Vijay Sharma",       phone:"(954) 555-0108", email:"", city:"Plantation",      lang:"Hindi",     bio:"" },
+  { name:"Nalini Modi",        phone:"(305) 555-0109", email:"", city:"Kendall",         lang:"Gujarati",  bio:"" },
+  { name:"Hema Trivedi",       phone:"(954) 555-0110", email:"", city:"Sunrise",         lang:"Gujarati",  bio:"" },
+  { name:"Ramila Desai",       phone:"(754) 555-0111", email:"", city:"Tamarac",         lang:"Gujarati",  bio:"" },
+  { name:"Mohan Bhatt",        phone:"(786) 555-0112", email:"", city:"North Miami",     lang:"Gujarati",  bio:"" },
+  { name:"Sunanda Iyer",       phone:"(305) 555-0113", email:"", city:"Homestead",       lang:"Tamil",     bio:"" },
+  { name:"Girish Nair",        phone:"(954) 555-0114", email:"", city:"Fort Lauderdale", lang:"Malayalam", bio:"" },
+  { name:"Usha Kapoor",        phone:"(754) 555-0115", email:"", city:"Davie",           lang:"Punjabi",   bio:"" },
+  { name:"Rakesh Verma",       phone:"(786) 555-0116", email:"", city:"Cutler Bay",      lang:"Hindi",     bio:"" },
+  { name:"Kamla Pandya",       phone:"(954) 555-0117", email:"", city:"Hollywood",       lang:"Gujarati",  bio:"" },
+  { name:"Bharat Solanki",     phone:"(305) 555-0118", email:"", city:"Opa-locka",       lang:"Gujarati",  bio:"" },
+  { name:"Rekha Jain",         phone:"(954) 555-0119", email:"", city:"Parkland",        lang:"Hindi",     bio:"" },
+  { name:"Chandra Shah",       phone:"(754) 555-0120", email:"", city:"Aventura",        lang:"Gujarati",  bio:"" },
+  { name:"Minal Bhattacharya", phone:"(786) 555-0121", email:"", city:"Brickell",        lang:"Bengali",   bio:"" },
+  { name:"Gopal Mishra",       phone:"(954) 555-0122", email:"", city:"Margate",         lang:"Hindi",     bio:"" },
+  { name:"Pushpa Agarwal",     phone:"(305) 555-0123", email:"", city:"Doral",           lang:"Hindi",     bio:"" },
+  { name:"Apurva Desai",       phone:"(954) 555-0124", email:"", city:"Weston",          lang:"Gujarati",  bio:"Event Coordinator" },
+  { name:"Sunita Mehta",       phone:"(754) 555-0125", email:"", city:"Pembroke Pines",  lang:"Hindi",     bio:"Yoga & Wellness" },
+  { name:"Anita Sharma",       phone:"(786) 555-0126", email:"", city:"Coral Gables",    lang:"Hindi",     bio:"Cultural Events Head" },
+  { name:"Mohan Gupta",        phone:"(954) 555-0127", email:"", city:"Davie",           lang:"Hindi",     bio:"Outreach Lead" },
+  { name:"Rajesh Patel",       phone:"(305) 555-0128", email:"", city:"Miramar",         lang:"Gujarati",  bio:"Senior Director" },
+];
+
+// ── Persistent storage helpers ────────────────────────────────────
+const STORAGE_KEY = 'navjivan-members-v2';
+
+async function loadMembers() {
+  try {
+    const r = await window.storage.get(STORAGE_KEY, true);
+    if (r && r.value) {
+      const saved = JSON.parse(r.value);
+      // Merge saved members (by name) with seed list — seed first, then any new registrations
+      const names = new Set(MEMBERS.map(m=>m.name.toLowerCase()));
+      saved.forEach(m => { if(!names.has(m.name.toLowerCase())) MEMBERS.push(m); });
+    }
+  } catch(e) { /* first load — storage empty */ }
+  renderDirectory();
+  renderEvents();
+}
+
+async function saveMembers() {
+  try { await window.storage.set(STORAGE_KEY, JSON.stringify(MEMBERS), true); } catch(e) {}
+}
+
+// ── Registration ──────────────────────────────────────────────────
+async function registerMember() {
+  const name  = document.getElementById('reg-name').value.trim();
+  const phone = document.getElementById('reg-phone').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const city  = document.getElementById('reg-city').value.trim();
+  const lang  = document.getElementById('reg-lang').value;
+  const bio   = document.getElementById('reg-bio').value.trim();
+  const msg   = document.getElementById('reg-msg');
+
+  if (!name)  { msg.style.color='var(--maroon)'; msg.textContent='⚠ Please enter your full name.'; return; }
+  if (!phone) { msg.style.color='var(--maroon)'; msg.textContent='⚠ Please enter your phone number.'; return; }
+
+  const dup = MEMBERS.find(m => m.name.toLowerCase()===name.toLowerCase());
+  if (dup) { msg.style.color='var(--forest)'; msg.textContent='✓ You are already a registered member! Welcome back 🙏'; return; }
+
+  MEMBERS.push({ name, phone, email, city, lang, bio });
+  MEMBERS.sort((a,b)=>a.name.localeCompare(b.name));
+  await saveMembers();
+
+  // Clear form
+  ['reg-name','reg-phone','reg-email','reg-city','reg-bio'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('reg-lang').value='';
+
+  msg.style.color='var(--forest)';
+  msg.textContent=`🎉 Welcome to the Parivar, ${name}!`;
+  setTimeout(()=>msg.textContent='', 4000);
+
+  renderDirectory();
+  showToast(`🙏 Namaste ${name}! You are now part of our family.`);
+}
+
+// ── Member Directory render ───────────────────────────────────────
+function renderDirectory() {
+  const q = (document.getElementById('dir-search')?.value||'').toLowerCase();
+  const list = document.getElementById('member-directory-list');
+  const count = document.getElementById('dir-count');
+  if (!list) return;
+
+  const filtered = MEMBERS.filter(m =>
+    m.name.toLowerCase().includes(q) ||
+    (m.city||'').toLowerCase().includes(q) ||
+    (m.lang||'').toLowerCase().includes(q)
+  );
+
+  count.textContent = `${MEMBERS.length} members`;
+
+  if (!filtered.length) {
+    list.innerHTML = '<div style="text-align:center;padding:20px;color:var(--text-muted);font-size:14px;">No members found.</div>';
+    return;
+  }
+
+  list.innerHTML = filtered.map(m => {
+    const initials = m.name.split(' ').map(w=>w[0]).join('').substring(0,2).toUpperCase();
+    const waLink = m.phone ? `https://wa.me/1${m.phone.replace(/\D/g,'')}` : '#';
+    return `<div class="dir-member-card">
+      <div class="dir-avatar" style="background:${avatarColor(m.name)}">${initials}</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-weight:600;color:var(--maroon);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${m.name}</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">
+          ${m.phone ? '📞 '+m.phone : ''}
+          ${m.city ? ' · 📍 '+m.city : ''}
+          ${m.lang ? ' · 🗣 '+m.lang : ''}
+        </div>
+        ${m.bio ? `<div style="font-size:11px;color:var(--teal);margin-top:2px;font-style:italic;">${m.bio}</div>` : ''}
+      </div>
+      ${m.phone ? `<a href="${waLink}" target="_blank" title="WhatsApp ${m.name}" style="flex-shrink:0;width:32px;height:32px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ── Member search dropdown (RSVP modal) ───────────────────────────
+function filterMembers() {
+  const q = document.getElementById('member-search').value.trim().toLowerCase();
+  const dd = document.getElementById('member-dropdown');
+  if (!q) { dd.style.display='none'; return; }
+  const matches = MEMBERS.filter(m => m.name.toLowerCase().includes(q));
+  if (!matches.length) { dd.style.display='none'; return; }
+  dd.innerHTML = matches.map(m =>
+    `<div onclick="selectMember('${m.name.replace(/'/g,"\\'")}\")" style="padding:10px 14px;cursor:pointer;border-bottom:0.5px solid rgba(212,160,23,0.2);display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-dark);" onmouseover="this.style.background='var(--deep-cream)'" onmouseout="this.style.background='white'">
+      <div style="width:32px;height:32px;border-radius:50%;background:${avatarColor(m.name)};display:flex;align-items:center;justify-content:center;font-size:12px;color:white;font-weight:600;flex-shrink:0;">${m.name.split(' ').map(w=>w[0]).join('').substring(0,2)}</div>
+      <div><div style="font-weight:500;">${m.name}</div><div style="font-size:11px;color:var(--text-muted);">${m.phone||''}${m.city?' · '+m.city:''}</div></div>
+    </div>`
+  ).join('');
+  dd.style.display = 'block';
+}
+
+function selectMember(name) {
+  const m = MEMBERS.find(x=>x.name===name);
+  if (!m) return;
+  selectedMember = m;
+  document.getElementById('member-search').value = m.name;
+  document.getElementById('member-dropdown').style.display = 'none';
+  document.getElementById('sel-name').textContent = m.name;
+  document.getElementById('sel-phone').textContent = (m.phone?'📞 '+m.phone:'') + (m.city?' · 📍 '+m.city:'');
+  document.getElementById('sel-avatar').textContent = m.name.split(' ').map(w=>w[0]).join('').substring(0,2);
+  document.getElementById('sel-avatar').style.background = avatarColor(m.name);
+  document.getElementById('selected-member-card').style.display = 'block';
+}
+
+function clearSelection() {
+  selectedMember = null;
+  document.getElementById('member-search').value = '';
+  document.getElementById('selected-member-card').style.display = 'none';
+}
+
+// ── Events ────────────────────────────────────────────────────────
+const events = [
+  { id:1, title:"Morning Yoga & Pranayama",                   color:"saffron", date:"Every Tuesday & Thursday", time:"7:00 AM – 8:30 AM",   location:"Pembroke Pines Community Park",   spots:25, description:"Begin your day with gentle yoga, breathing exercises, and meditation guided by our certified instructor Sunita Mehta. All levels welcome.",              attendees:["Priya Patel","Ramesh Shah","Meena Joshi","Suresh Kumar"] },
+  { id:2, title:"Diwali Celebration Dinner",                  color:"maroon",  date:"Saturday, Oct 18, 2025",   time:"6:00 PM – 10:00 PM",  location:"Gujarati Samaj Hall, Miramar",     spots:80, description:"Join us for a spectacular Diwali evening with traditional sweets, diyas, cultural performances, Antakshri, and a grand potluck dinner.",           attendees:["Kavita Mehta","Dinesh Patel","Sarla Gupta","Vijay Sharma","Nalini Modi"] },
+  { id:3, title:"Bhajan Sandhya",                             color:"teal",    date:"Sunday, Jul 6, 2025",      time:"5:00 PM – 8:00 PM",   location:"BAPS Swaminarayan Temple, Weston", spots:60, description:"A peaceful evening of devotional songs, bhajans, and kirtan. Come with an open heart and leave with a peaceful soul. Light prasad provided.",        attendees:["Hema Trivedi","Ramila Desai","Mohan Bhatt"] },
+  { id:4, title:"Healthy Indian Cooking Workshop",            color:"forest",  date:"Saturday, Jul 19, 2025",   time:"10:00 AM – 1:00 PM",  location:"South Miami Senior Center",        spots:20, description:"Learn to cook heart-healthy Indian dishes — dal, sabzi, and more — with guidance from our community's expert home chefs. Tasting included!",        attendees:["Sunanda Iyer","Girish Nair","Usha Kapoor","Rakesh Verma"] },
+  { id:5, title:"Seniors' Picnic & Antakshri",               color:"saffron", date:"Sunday, Aug 3, 2025",      time:"9:00 AM – 1:00 PM",   location:"Tropical Park, Miami",             spots:50, description:"A joyful outdoor picnic with games, Antakshri, laughter, and a potluck breakfast. Bring your favourite snack and a big smile!",                   attendees:["Kamla Pandya","Bharat Solanki","Rekha Jain"] },
+  { id:6, title:"Health Awareness Talk — Diabetes & Heart",  color:"teal",    date:"Wednesday, Aug 20, 2025",  time:"3:00 PM – 5:00 PM",   location:"Doral Public Library, Room A",     spots:40, description:"A free talk by Dr. Anand Nair (MD) covering diabetes management, heart-healthy living, and Q&A. Free health screening included.",                 attendees:["Chandra Shah","Minal Bhattacharya","Gopal Mishra","Pushpa Agarwal"] }
+];
+
+let activeEventId = null, selectedMember = null;
+const attendeeData = {};
+events.forEach(e => { attendeeData[e.id] = [...e.attendees]; });
+
+function renderEvents() {
+  const grid = document.getElementById('events-grid');
+  if (!grid) return;
+  grid.innerHTML = events.map(ev => {
+    const atts = attendeeData[ev.id];
+    const chips = atts.map(name =>
+      `<span class="attendee-chip" onclick="toggleAttendee(${ev.id},'${name.replace(/'/g,"\\'")}',this)">${name}</span>`
+    ).join('');
+    return `<div class="event-card fade-in">
+      <div class="event-header ${ev.color}">
+        <div class="event-date-badge">📅 ${ev.date}</div>
+        <h3>${ev.title}</h3>
+        <div class="event-time">⏰ ${ev.time} &nbsp;|&nbsp; 📍 ${ev.location}</div>
+      </div>
+      <div class="event-body">
+        <p>${ev.description}</p>
+        <div class="event-meta"><span>👥 Up to ${ev.spots} spots</span><span>✅ ${atts.length} attending</span></div>
+        <div class="attendees-section">
+          <div class="attendees-label">Who's attending — click your name to check in:</div>
+          <div class="attendees-chips" id="chips-${ev.id}">${chips}</div>
+        </div>
+        <button class="rsvp-btn" onclick="openRSVP(${ev.id},'${ev.title.replace(/'/g,"\\'")}')">+ RSVP — Select Your Name</button>
+        <div class="rsvp-count" id="count-${ev.id}">${atts.length} members attending</div>
+      </div>
+    </div>`;
+  }).join('');
+  observeFadeIns();
+}
+
+function toggleAttendee(eventId, name, el) {
+  el.classList.toggle('attending');
+  const checked = document.querySelectorAll(`#chips-${eventId} .attendee-chip.attending`).length;
+  document.getElementById(`count-${eventId}`).textContent = `${attendeeData[eventId].length} on list (${checked} checked in today)`;
+  showToast(el.classList.contains('attending') ? `✓ ${name} checked in!` : `${name} unchecked`);
+}
+
+function openRSVP(eventId, title) {
+  activeEventId = eventId;
+  document.getElementById('modal-event-name').textContent = title;
+  clearSelection();
+  document.getElementById('new-member-name').value = '';
+  document.getElementById('new-member-phone').value = '';
+  document.getElementById('rsvp-modal').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('rsvp-modal').classList.remove('active');
+  document.getElementById('member-dropdown').style.display = 'none';
+}
+
+function confirmRSVP() {
+  let name, phone='';
+  if (selectedMember) {
+    name = selectedMember.name; phone = selectedMember.phone;
+  } else {
+    name  = document.getElementById('new-member-name').value.trim();
+    phone = document.getElementById('new-member-phone').value.trim();
+    if (!name) { showToast('Please select or enter your name.'); return; }
+    if (!MEMBERS.find(m=>m.name.toLowerCase()===name.toLowerCase())) {
+      MEMBERS.push({ name, phone, email:'', city:'', lang:'', bio:'' });
+      MEMBERS.sort((a,b)=>a.name.localeCompare(b.name));
+      saveMembers();
+    }
+  }
+  if (attendeeData[activeEventId].includes(name)) { showToast('You are already on the list! Click your chip to check in.'); closeModal(); return; }
+  attendeeData[activeEventId].push(name);
+  const chips = document.getElementById(`chips-${activeEventId}`);
+  const chip = document.createElement('span');
+  chip.className = 'attendee-chip attending';
+  chip.textContent = name;
+  const eid = activeEventId;
+  chip.onclick = function(){ toggleAttendee(eid, name, chip); };
+  chips.appendChild(chip);
+  document.getElementById(`count-${activeEventId}`).textContent = `${attendeeData[activeEventId].length} members attending`;
+  showToast(`🎉 ${name} added! See you at the event.`);
+  closeModal();
+}
+
+function showAddEventModal() {
+  ['suggest-name','suggest-event','suggest-date'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('suggest-modal').classList.add('active');
+}
+
+function submitSuggestion() {
+  const name = document.getElementById('suggest-name').value.trim();
+  const ev   = document.getElementById('suggest-event').value.trim();
+  if (!name||!ev) { showToast('Please fill in your name and event idea.'); return; }
+  document.getElementById('suggest-modal').classList.remove('active');
+  showToast(`🙏 Thank you ${name}! Suggestion sent to Apurva Desai.`);
+}
+
+function sendContactEmail() {
+  const name    = document.getElementById('ct-name').value.trim();
+  const phone   = document.getElementById('ct-phone').value.trim();
+  const email   = document.getElementById('ct-email').value.trim();
+  const subject = document.getElementById('ct-subject').value;
+  const message = document.getElementById('ct-message').value.trim();
+  const msgEl   = document.getElementById('ct-msg');
+
+  if (!name)    { msgEl.style.color='var(--maroon)'; msgEl.textContent='⚠ Please enter your name.'; return; }
+  if (!email)   { msgEl.style.color='var(--maroon)'; msgEl.textContent='⚠ Please enter your email address.'; return; }
+  if (!subject) { msgEl.style.color='var(--maroon)'; msgEl.textContent='⚠ Please select a topic.'; return; }
+  if (!message) { msgEl.style.color='var(--maroon)'; msgEl.textContent='⚠ Please write your message.'; return; }
+
+  const body = [
+    `Namaste,`,
+    ``,
+    `You have received a new message from the Navjivan Senior Parivar website.`,
+    ``,
+    `──────────────────────────────`,
+    `Name:    ${name}`,
+    `Phone:   ${phone || 'Not provided'}`,
+    `Email:   ${email}`,
+    `Topic:   ${subject}`,
+    `──────────────────────────────`,
+    ``,
+    `Message:`,
+    message,
+    ``,
+    `──────────────────────────────`,
+    `Sent via NavjivanSeniorParivar.com`,
+  ].join('\n');
+
+  const mailtoLink = `mailto:parivarnavjivan@gmail.com`
+    + `?subject=${encodeURIComponent('[Navjivan Parivar] ' + subject + ' — from ' + name)}`
+    + `&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoLink;
+
+  msgEl.style.color = 'var(--forest)';
+  msgEl.textContent = '✅ Your email app is opening… Please click Send to deliver your message. Dhanyavaad! 🙏';
+
+  // Clear form after a moment
+  setTimeout(() => {
+    ['ct-name','ct-phone','ct-email','ct-message'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('ct-subject').value = '';
+    setTimeout(() => { msgEl.textContent = ''; }, 6000);
+  }, 1500);
+}
+
+function toggleFaq(btn){ btn.parentElement.classList.toggle('open'); }
+
+function showToast(msg) {
+  const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 3400);
+}
+
+function observeFadeIns() {
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+}
+
+function animateCounter(id,target,suffix=''){
+  let n=0; const el=document.getElementById(id); const step=Math.ceil(target/40);
+  const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent=n+suffix;if(n>=target)clearInterval(t);},35);
+}
+
+document.addEventListener('click', e=>{
+  const dd=document.getElementById('member-dropdown');
+  const inp=document.getElementById('member-search');
+  if(dd&&inp&&!dd.contains(e.target)&&e.target!==inp) dd.style.display='none';
+});
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  loadMembers();
+  observeFadeIns();
+  setTimeout(()=>{ animateCounter('counter-members',120,'+'); animateCounter('counter-events',48,'+'); animateCounter('counter-years',5,'+'); },600);
+  document.getElementById('rsvp-modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+  document.getElementById('suggest-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+});
+</script>
+</body>
+</html>
