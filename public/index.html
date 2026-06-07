@@ -1283,12 +1283,7 @@ function clearSelection() {
 
 // ── Events ────────────────────────────────────────────────────────
 const events = [
-  { id:1, title:"Morning Yoga & Pranayama",                   color:"saffron", date:"Every Tuesday & Thursday", time:"7:00 AM – 8:30 AM",   location:"Pembroke Pines Community Park",   spots:25, description:"Begin your day with gentle yoga, breathing exercises, and meditation guided by our certified instructor Sunita Mehta. All levels welcome.",              attendees:[] },
-  { id:2, title:"Diwali Celebration Dinner",                  color:"maroon",  date:"Saturday, Oct 18, 2025",   time:"6:00 PM – 10:00 PM",  location:"Gujarati Samaj Hall, Miramar",     spots:80, description:"Join us for a spectacular Diwali evening with traditional sweets, diyas, cultural performances, Antakshri, and a grand potluck dinner.",           attendees:[] },
-  { id:3, title:"Bhajan Sandhya",                             color:"teal",    date:"Sunday, Jul 6, 2025",      time:"5:00 PM – 8:00 PM",   location:"BAPS Swaminarayan Temple, Weston", spots:60, description:"A peaceful evening of devotional songs, bhajans, and kirtan. Come with an open heart and leave with a peaceful soul. Light prasad provided.",        attendees:[] },
-  { id:4, title:"Healthy Indian Cooking Workshop",            color:"forest",  date:"Saturday, Jul 19, 2025",   time:"10:00 AM – 1:00 PM",  location:"South Miami Senior Center",        spots:20, description:"Learn to cook heart-healthy Indian dishes — dal, sabzi, and more — with guidance from our community's expert home chefs. Tasting included!",        attendees:[] },
-  { id:5, title:"Seniors' Picnic & Antakshri",               color:"saffron", date:"Sunday, Aug 3, 2025",      time:"9:00 AM – 1:00 PM",   location:"Tropical Park, Miami",             spots:50, description:"A joyful outdoor picnic with games, Antakshri, laughter, and a potluck breakfast. Bring your favourite snack and a big smile!",                   attendees:[] },
-  { id:6, title:"Health Awareness Talk — Diabetes & Heart",  color:"teal",    date:"Wednesday, Aug 20, 2025",  time:"3:00 PM – 5:00 PM",   location:"Doral Public Library, Room A",     spots:40, description:"A free talk by Dr. Anand Nair (MD) covering diabetes management, heart-healthy living, and Q&A. Free health screening included.",                 attendees:[] }
+
 ];
 
 let activeEventId = null, selectedMember = null;
@@ -1298,6 +1293,14 @@ events.forEach(e => { attendeeData[e.id] = [...e.attendees]; });
 function renderEvents() {
   const grid = document.getElementById('events-grid');
   if (!grid) return;
+  if (!events.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px 24px;color:var(--text-muted);">
+      <div style="font-size:48px;margin-bottom:16px;">🪔</div>
+      <div style="font-family:'Yatra One',cursive;font-size:22px;color:var(--maroon);margin-bottom:8px;">Events Coming Soon</div>
+      <div style="font-size:14px;line-height:1.8;">Our first events are being planned with love.<br>Join our WhatsApp group to be the first to know!</div>
+    </div>`;
+    return;
+  }
   grid.innerHTML = events.map(ev => {
     const atts = attendeeData[ev.id];
     const chips = atts.map(name =>
