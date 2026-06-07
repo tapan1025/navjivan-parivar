@@ -723,7 +723,6 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#events">Events</a>
-      <a href="#team">Leadership</a>
       <a href="#faq">FAQ</a>
       <a href="#members">Members</a>
       <a href="#contact">Contact</a>
@@ -807,48 +806,6 @@
     </div>
     <div style="text-align:center;margin-top:36px;">
       <button class="btn-primary" onclick="showAddEventModal()" style="background:var(--maroon);color:white;">+ Suggest a New Event</button>
-    </div>
-  </div>
-</section>
-
-<!-- Leadership -->
-<section id="team" class="team-section">
-  <div class="container">
-    <div class="section-label">Our Leaders</div>
-    <div class="section-title">Meet the Parivar Seva Team</div>
-    <div class="section-divider"><span class="section-divider-icon">🌸</span></div>
-    <div class="team-grid fade-in">
-      <div class="team-card director">
-        <div class="director-badge">⭐ Senior Director</div>
-        <div class="team-avatar maroon">R</div>
-        <h4>Rajesh Patel</h4>
-        <div class="role">Senior Director, Navjivan Senior Parivar</div>
-        <div class="team-bio">A visionary leader with a deep love for community. Rajesh has dedicated years to building bridges of friendship among South Florida seniors.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar saffron">S</div>
-        <h4>Sunita Mehta</h4>
-        <div class="role">Wellness &amp; Yoga Coordinator</div>
-        <div class="team-bio">Certified yoga instructor and wellness advocate bringing daily health and mindfulness to our Parivar.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar teal">A</div>
-        <h4>Anita Sharma</h4>
-        <div class="role">Cultural Events Head</div>
-        <div class="team-bio">Master organizer of festivals, Garba nights, and cultural celebrations that keep our traditions alive.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar forest">M</div>
-        <h4>Mohan Gupta</h4>
-        <div class="role">Community Outreach Lead</div>
-        <div class="team-bio">Connecting members, welcoming newcomers, and ensuring every senior feels seen and valued in our family.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar" style="background:linear-gradient(135deg,#9B2D7F,#C0448F);">A</div>
-        <h4>Apurva Desai</h4>
-        <div class="role">Event Coordinator</div>
-        <div class="team-bio">Passionate about bringing people together, Apurva handles event logistics, scheduling, and ensures every gathering runs smoothly and joyfully.</div>
-      </div>
     </div>
   </div>
 </section>
@@ -980,7 +937,10 @@
           </div>
           <input class="modal-input" type="text" id="dir-search" placeholder="🔍 Search members…" oninput="renderDirectory()" style="margin-bottom:12px;"/>
           <div id="member-directory-list" style="max-height:420px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;">
-            <div style="text-align:center;padding:24px;color:var(--text-muted);font-size:14px;">Loading members…</div>
+            <div style="text-align:center;padding:32px 20px;color:var(--text-muted);font-size:14px;line-height:1.8;">
+              🌸 No members yet — be the first to join!<br>
+              <span style="font-size:12px;">Fill in the form on the left to register yourself.</span>
+            </div>
           </div>
         </div>
         <div style="font-size:11px;color:var(--text-muted);text-align:center;padding:0 8px;">
@@ -1193,48 +1153,16 @@ const AV_COLORS = [
 function avatarColor(name){ let h=0; for(let c of name) h=(h*31+c.charCodeAt(0))%AV_COLORS.length; return AV_COLORS[Math.abs(h)]; }
 
 // ── Seed / runtime member list ────────────────────────────────────
-let MEMBERS = [
-  { name:"Priya Patel",        phone:"(954) 555-0101", email:"", city:"Pembroke Pines", lang:"Gujarati",  bio:"" },
-  { name:"Ramesh Shah",        phone:"(954) 555-0102", email:"", city:"Miramar",         lang:"Gujarati",  bio:"" },
-  { name:"Meena Joshi",        phone:"(786) 555-0103", email:"", city:"Doral",           lang:"Hindi",     bio:"" },
-  { name:"Suresh Kumar",       phone:"(305) 555-0104", email:"", city:"Hialeah",         lang:"Hindi",     bio:"" },
-  { name:"Kavita Mehta",       phone:"(954) 555-0105", email:"", city:"Weston",          lang:"Gujarati",  bio:"" },
-  { name:"Dinesh Patel",       phone:"(754) 555-0106", email:"", city:"Coral Springs",   lang:"Gujarati",  bio:"" },
-  { name:"Sarla Gupta",        phone:"(786) 555-0107", email:"", city:"Miami",           lang:"Hindi",     bio:"" },
-  { name:"Vijay Sharma",       phone:"(954) 555-0108", email:"", city:"Plantation",      lang:"Hindi",     bio:"" },
-  { name:"Nalini Modi",        phone:"(305) 555-0109", email:"", city:"Kendall",         lang:"Gujarati",  bio:"" },
-  { name:"Hema Trivedi",       phone:"(954) 555-0110", email:"", city:"Sunrise",         lang:"Gujarati",  bio:"" },
-  { name:"Ramila Desai",       phone:"(754) 555-0111", email:"", city:"Tamarac",         lang:"Gujarati",  bio:"" },
-  { name:"Mohan Bhatt",        phone:"(786) 555-0112", email:"", city:"North Miami",     lang:"Gujarati",  bio:"" },
-  { name:"Sunanda Iyer",       phone:"(305) 555-0113", email:"", city:"Homestead",       lang:"Tamil",     bio:"" },
-  { name:"Girish Nair",        phone:"(954) 555-0114", email:"", city:"Fort Lauderdale", lang:"Malayalam", bio:"" },
-  { name:"Usha Kapoor",        phone:"(754) 555-0115", email:"", city:"Davie",           lang:"Punjabi",   bio:"" },
-  { name:"Rakesh Verma",       phone:"(786) 555-0116", email:"", city:"Cutler Bay",      lang:"Hindi",     bio:"" },
-  { name:"Kamla Pandya",       phone:"(954) 555-0117", email:"", city:"Hollywood",       lang:"Gujarati",  bio:"" },
-  { name:"Bharat Solanki",     phone:"(305) 555-0118", email:"", city:"Opa-locka",       lang:"Gujarati",  bio:"" },
-  { name:"Rekha Jain",         phone:"(954) 555-0119", email:"", city:"Parkland",        lang:"Hindi",     bio:"" },
-  { name:"Chandra Shah",       phone:"(754) 555-0120", email:"", city:"Aventura",        lang:"Gujarati",  bio:"" },
-  { name:"Minal Bhattacharya", phone:"(786) 555-0121", email:"", city:"Brickell",        lang:"Bengali",   bio:"" },
-  { name:"Gopal Mishra",       phone:"(954) 555-0122", email:"", city:"Margate",         lang:"Hindi",     bio:"" },
-  { name:"Pushpa Agarwal",     phone:"(305) 555-0123", email:"", city:"Doral",           lang:"Hindi",     bio:"" },
-  { name:"Apurva Desai",       phone:"(954) 555-0124", email:"", city:"Weston",          lang:"Gujarati",  bio:"Event Coordinator" },
-  { name:"Sunita Mehta",       phone:"(754) 555-0125", email:"", city:"Pembroke Pines",  lang:"Hindi",     bio:"Yoga & Wellness" },
-  { name:"Anita Sharma",       phone:"(786) 555-0126", email:"", city:"Coral Gables",    lang:"Hindi",     bio:"Cultural Events Head" },
-  { name:"Mohan Gupta",        phone:"(954) 555-0127", email:"", city:"Davie",           lang:"Hindi",     bio:"Outreach Lead" },
-  { name:"Rajesh Patel",       phone:"(305) 555-0128", email:"", city:"Miramar",         lang:"Gujarati",  bio:"Senior Director" },
-];
+let MEMBERS = [];
 
 // ── Persistent storage helpers ────────────────────────────────────
-const STORAGE_KEY = 'navjivan-members-v2';
+const STORAGE_KEY = 'navjivan-members-v3';
 
 async function loadMembers() {
   try {
     const r = await window.storage.get(STORAGE_KEY, true);
     if (r && r.value) {
-      const saved = JSON.parse(r.value);
-      // Merge saved members (by name) with seed list — seed first, then any new registrations
-      const names = new Set(MEMBERS.map(m=>m.name.toLowerCase()));
-      saved.forEach(m => { if(!names.has(m.name.toLowerCase())) MEMBERS.push(m); });
+      MEMBERS = JSON.parse(r.value);
     }
   } catch(e) { /* first load — storage empty */ }
   renderDirectory();
@@ -1355,12 +1283,12 @@ function clearSelection() {
 
 // ── Events ────────────────────────────────────────────────────────
 const events = [
-  { id:1, title:"Morning Yoga & Pranayama",                   color:"saffron", date:"Every Tuesday & Thursday", time:"7:00 AM – 8:30 AM",   location:"Pembroke Pines Community Park",   spots:25, description:"Begin your day with gentle yoga, breathing exercises, and meditation guided by our certified instructor Sunita Mehta. All levels welcome.",              attendees:["Priya Patel","Ramesh Shah","Meena Joshi","Suresh Kumar"] },
-  { id:2, title:"Diwali Celebration Dinner",                  color:"maroon",  date:"Saturday, Oct 18, 2025",   time:"6:00 PM – 10:00 PM",  location:"Gujarati Samaj Hall, Miramar",     spots:80, description:"Join us for a spectacular Diwali evening with traditional sweets, diyas, cultural performances, Antakshri, and a grand potluck dinner.",           attendees:["Kavita Mehta","Dinesh Patel","Sarla Gupta","Vijay Sharma","Nalini Modi"] },
-  { id:3, title:"Bhajan Sandhya",                             color:"teal",    date:"Sunday, Jul 6, 2025",      time:"5:00 PM – 8:00 PM",   location:"BAPS Swaminarayan Temple, Weston", spots:60, description:"A peaceful evening of devotional songs, bhajans, and kirtan. Come with an open heart and leave with a peaceful soul. Light prasad provided.",        attendees:["Hema Trivedi","Ramila Desai","Mohan Bhatt"] },
-  { id:4, title:"Healthy Indian Cooking Workshop",            color:"forest",  date:"Saturday, Jul 19, 2025",   time:"10:00 AM – 1:00 PM",  location:"South Miami Senior Center",        spots:20, description:"Learn to cook heart-healthy Indian dishes — dal, sabzi, and more — with guidance from our community's expert home chefs. Tasting included!",        attendees:["Sunanda Iyer","Girish Nair","Usha Kapoor","Rakesh Verma"] },
-  { id:5, title:"Seniors' Picnic & Antakshri",               color:"saffron", date:"Sunday, Aug 3, 2025",      time:"9:00 AM – 1:00 PM",   location:"Tropical Park, Miami",             spots:50, description:"A joyful outdoor picnic with games, Antakshri, laughter, and a potluck breakfast. Bring your favourite snack and a big smile!",                   attendees:["Kamla Pandya","Bharat Solanki","Rekha Jain"] },
-  { id:6, title:"Health Awareness Talk — Diabetes & Heart",  color:"teal",    date:"Wednesday, Aug 20, 2025",  time:"3:00 PM – 5:00 PM",   location:"Doral Public Library, Room A",     spots:40, description:"A free talk by Dr. Anand Nair (MD) covering diabetes management, heart-healthy living, and Q&A. Free health screening included.",                 attendees:["Chandra Shah","Minal Bhattacharya","Gopal Mishra","Pushpa Agarwal"] }
+  { id:1, title:"Morning Yoga & Pranayama",                   color:"saffron", date:"Every Tuesday & Thursday", time:"7:00 AM – 8:30 AM",   location:"Pembroke Pines Community Park",   spots:25, description:"Begin your day with gentle yoga, breathing exercises, and meditation guided by our certified instructor Sunita Mehta. All levels welcome.",              attendees:[] },
+  { id:2, title:"Diwali Celebration Dinner",                  color:"maroon",  date:"Saturday, Oct 18, 2025",   time:"6:00 PM – 10:00 PM",  location:"Gujarati Samaj Hall, Miramar",     spots:80, description:"Join us for a spectacular Diwali evening with traditional sweets, diyas, cultural performances, Antakshri, and a grand potluck dinner.",           attendees:[] },
+  { id:3, title:"Bhajan Sandhya",                             color:"teal",    date:"Sunday, Jul 6, 2025",      time:"5:00 PM – 8:00 PM",   location:"BAPS Swaminarayan Temple, Weston", spots:60, description:"A peaceful evening of devotional songs, bhajans, and kirtan. Come with an open heart and leave with a peaceful soul. Light prasad provided.",        attendees:[] },
+  { id:4, title:"Healthy Indian Cooking Workshop",            color:"forest",  date:"Saturday, Jul 19, 2025",   time:"10:00 AM – 1:00 PM",  location:"South Miami Senior Center",        spots:20, description:"Learn to cook heart-healthy Indian dishes — dal, sabzi, and more — with guidance from our community's expert home chefs. Tasting included!",        attendees:[] },
+  { id:5, title:"Seniors' Picnic & Antakshri",               color:"saffron", date:"Sunday, Aug 3, 2025",      time:"9:00 AM – 1:00 PM",   location:"Tropical Park, Miami",             spots:50, description:"A joyful outdoor picnic with games, Antakshri, laughter, and a potluck breakfast. Bring your favourite snack and a big smile!",                   attendees:[] },
+  { id:6, title:"Health Awareness Talk — Diabetes & Heart",  color:"teal",    date:"Wednesday, Aug 20, 2025",  time:"3:00 PM – 5:00 PM",   location:"Doral Public Library, Room A",     spots:40, description:"A free talk by Dr. Anand Nair (MD) covering diabetes management, heart-healthy living, and Q&A. Free health screening included.",                 attendees:[] }
 ];
 
 let activeEventId = null, selectedMember = null;
