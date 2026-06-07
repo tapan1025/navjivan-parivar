@@ -721,12 +721,12 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#faq">FAQ</a>
-      <a href="#members">Members</a>
-      <a href="#contact">Contact</a>
-      <a href="#join" class="active">Join Us</a>
+      <a href="#about" onclick="scrollTo('about')">About</a>
+      <a href="#events" onclick="scrollTo('events')">Events</a>
+      <a href="#faq" onclick="scrollTo('faq')">FAQ</a>
+      <a href="#members" onclick="scrollTo('members')">Members</a>
+      <a href="#contact" onclick="scrollTo('contact')">Contact</a>
+      <a href="#join" onclick="scrollTo('join')" class="active">Join Us</a>
     </div>
   </div>
 </nav>
@@ -740,8 +740,8 @@
   <div class="hero-devanagari">नवजीवन सीनियर परिवार</div>
   <div class="hero-mission">"Renewing Lives Through Friendship, Wellness &amp; Culture"</div>
   <div class="hero-btns">
-    <a href="#events" class="btn-primary" onclick="event.preventDefault();document.getElementById('events').scrollIntoView({behavior:'smooth',block:'start'})">🗓 View Events</a>
-    <a href="#join" class="btn-outline" onclick="event.preventDefault();document.getElementById('join').scrollIntoView({behavior:'smooth',block:'start'})">Join Our WhatsApp</a>
+    <a href="#events" class="btn-primary" onclick="scrollTo('events')">🗓 View Events</a>
+    <a href="#join" class="btn-outline" onclick="scrollTo('join')">Join Our WhatsApp</a>
   </div>
 </div>
 
@@ -1481,6 +1481,15 @@ function sendContactEmail() {
     document.getElementById('ct-subject').value = '';
     setTimeout(() => { msgEl.textContent = ''; }, 6000);
   }, 1500);
+}
+
+function scrollTo(id) {
+  if (event) event.preventDefault();
+  const el = document.getElementById(id);
+  if (!el) return;
+  const navH = document.querySelector('nav')?.offsetHeight || 70;
+  const top = el.getBoundingClientRect().top + window.pageYOffset - navH - 12;
+  window.scrollTo({ top, behavior: 'smooth' });
 }
 
 function toggleFaq(btn){ btn.parentElement.classList.toggle('open'); }
